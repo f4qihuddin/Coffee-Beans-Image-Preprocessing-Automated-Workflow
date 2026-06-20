@@ -63,7 +63,7 @@ def preprocess_image(TRAIN_DIR, VAL_DIR):
         print("Semua generator berhasil dibuat!")
         
         # Path absolut
-        output_base_dir = r"C:\Users\F4QIH\Documents\Perkuliahan\Kursus Online\AI Engineer Learning Path\Membangun Sistem Machine Learning\Eksperimen_SML_Faqihuddin-Al-Ghiffary\preprocessing"
+        output_base_dir = r'C:\coffeebeans_preprocessing'
         os.makedirs(output_base_dir, exist_ok=True)
         print(f"Saving to: {output_base_dir}")
 
