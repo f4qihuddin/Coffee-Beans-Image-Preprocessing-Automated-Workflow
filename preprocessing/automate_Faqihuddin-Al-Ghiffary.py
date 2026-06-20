@@ -29,6 +29,7 @@ def preprocess_image(TRAIN_DIR, VAL_DIR):
     test_datagen = ImageDataGenerator(rescale=1./255)
 
     try:
+        print("Membuat train generator...")
         train_generator = datagen.flow_from_directory(
             TRAIN_DIR,
             target_size=(150, 150),
@@ -39,6 +40,7 @@ def preprocess_image(TRAIN_DIR, VAL_DIR):
             shuffle=True
         )
 
+        print("Membuat validation generator...")
         validation_generator = datagen.flow_from_directory(
             TRAIN_DIR,
             target_size=(150, 150),
@@ -49,6 +51,7 @@ def preprocess_image(TRAIN_DIR, VAL_DIR):
             shuffle=False
         )
 
+        print("Membuat test generator...")
         test_generator = test_datagen.flow_from_directory(
             VAL_DIR,
             target_size=(150, 150),
@@ -57,6 +60,7 @@ def preprocess_image(TRAIN_DIR, VAL_DIR):
             class_mode='categorical',
             shuffle=False
         )
+        print("Semua generator berhasil dibuat!")
         
         # Path absolut
         output_base_dir = r'C:\Users\F4QIH\OneDrive\Documents\Perkuliahan\Kursus Online\AI Engineer Learning Path\Membangun Sistem Machine Learning\Eksperimen_SML_Faqihuddin-Al-Ghiffary\preprocessing\coffeebeans_preprocessing'
