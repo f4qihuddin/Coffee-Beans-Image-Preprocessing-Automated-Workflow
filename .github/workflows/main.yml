@@ -40,5 +40,4 @@ jobs:
       # Run as a mlflow project
       - name: Run preprocessing script
         run: |
-          cd preprocessing
-          run automate_Faqihuddin-Al-Ghiffary
+          python preprocessing/automate_Faqihuddin-Al-Ghiffary.py
