@@ -63,7 +63,8 @@ def preprocess_image(TRAIN_DIR, VAL_DIR):
         print("Semua generator berhasil dibuat!")
         
         # Path absolut
-        output_base_dir = r'C:\coffeebeans_preprocessing'
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        output_base_dir = os.path.join(script_dir, 'coffeebeans_preprocessing')
         os.makedirs(output_base_dir, exist_ok=True)
         print(f"Saving to: {output_base_dir}")
 
