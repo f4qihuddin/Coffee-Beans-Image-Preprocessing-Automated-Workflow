@@ -12,6 +12,9 @@ env:
   TRAIN_DATA_URL: "coffeebeans_raw/train"
   TEST_DATA_URL: "coffeebeans_raw/test"
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
